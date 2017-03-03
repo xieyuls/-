@@ -1,0 +1,22 @@
+{
+  "studentList": [
+    {
+      "name": "张三",
+      "id": "1",
+      "major": "计算机",
+      "isChange":false
+    },
+    {
+      "name": "李四",
+      "id": "2",
+      "major": "计算机",
+      "isChange":false
+    },
+    {
+      "name": "麻子子",
+      "id": "3",
+      "major": "电子",
+      "isChange":false
+    }
+  ]
+}

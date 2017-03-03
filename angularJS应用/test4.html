@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<div ng-controller="Show">
+	<button ng-click="show()">hide</button>
+	<ul ng-show="menu">
+		<li ng-repeat="student in students">{{student.name}}</li>
+	</ul>
+</div>
+
+<script type="text/javascript" src="angular.js"></script>
+<script type="text/javascript">
+	var myApp=angular.module("myApp",[])
+		.controller('Show',function($scope){
+			$scope.students=[{name:"张三",id:"1"},
+							 {name:"李四",id:"2"},
+							 {name:"麻子",id:"3"}];
+			$scope.menu=false;
+			$scope.show=function(){
+				$scope.menu=!$scope.menu;
+			};
+		})
+</script>
+</body>
+</html>

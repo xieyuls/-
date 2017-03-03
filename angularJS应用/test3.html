@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>studentList</title>
+</head>
+<body>
+<ul ng-controller="StudentListController">
+	<li ng-repeat="student in students">
+		<a href="">{{student.id}}:{{student.name}}</a>
+	</li>
+	<button ng-click="InsertTom()">add</button>
+</ul>
+
+
+<script type="text/javascript" src="angular.js"></script>
+<script type="text/javascript">
+	var students=[{name:"张三",id:"1"},{name:"李四",id:"2"},{name:"王二",id:"3"}];
+	var myApp=angular.module("myApp",[]);
+	myApp.controller("StudentListController",StudentListController);
+	function StudentListController($scope){
+		$scope.students=students;
+		$scope.InsertTom=function(){
+			$scope.students.splice(1,0,{name:"麻子",id:"4"});
+		};
+	}
+</script>
+</body>
+</html>

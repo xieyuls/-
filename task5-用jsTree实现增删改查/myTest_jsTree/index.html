@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="plugin/jstree/dist/themes/default/style.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="jQuery/jquery-3.1.1.min.js"></script>
+    <script src="plugin/jstree/dist/jstree.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div>
+
+    <div class="top">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin:0;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">学生信息管理系统</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="">用户：xieyuls</a></li>
+                        <li><a href="#">班级信息</a></li>
+                        <li><a href="#">教务信息</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                用户管理 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">我的邮件<span class="badge pull-right">1</span></a></li>
+                                <li><a href="#">我的关注</a></li>
+                                <li><a href="#">好友列表</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">浏览记录</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">账号设置</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <!-- 模态框（Modal） 添加-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">添加学生信息</h4>
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                    姓名：<input type="text" style="width:200px;margin-bottom:10px;" class="name"></br>
+                    学号：<input type="number" style="width:200px;margin-bottom:10px;" class="id"></br>
+                    专业：<input type="text" style="width:200px;margin-bottom:10px;" class="major">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="node_create()" data-dismiss="modal">提交</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+    <!-- 模态框（Modal） 修改-->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel2">修改学生信息</h4>
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                    姓名：<input type="text" style="width:200px;margin-bottom:10px;" class="name1"></br>
+                    学号：<input type="number" style="width:200px;margin-bottom:10px;" class="id1"></br>
+                    专业：<input type="text" style="width:200px;margin-bottom:10px;" class="major1">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="edit()" data-dismiss="modal">提交</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+</div>
+<div class="left">
+    搜索：<input type="text" placeholder="请输入关键字" id="search" style="width: 258px;">
+    <div id="jstree">
+    </div>
+    <button onclick="node_rename()" class="btn btn-primary">重命名</button>
+    <button onclick="show()" class="btn btn-primary add" data-toggle="" data-target="">添加</button>
+    <button onclick="node_delete()" class="btn btn-primary">删除</button>
+</div>
+<div class="right">
+
+    <h2>学生信息<button class="edit btn btn-primary pull-right" style="height:35px;margin-right: 10px;;" onclick="edit_front()"
+                    data-toggle="" data-target="" disabled="true">edit</button></h2>
+    <table class="table table-bordered">
+        <tr>
+            <td>班级</td>
+            <td id="class"></td>
+        </tr>
+        <tr>
+            <td>姓名</td>
+            <td id="name"></td>
+        </tr>
+        <tr>
+            <td>学号</td>
+            <td id="id"></td>
+        </tr>
+        <tr>
+            <td>专业</td>
+            <td id="major"></td>
+        </tr>
+    </table>
+</div>
+<script src="js/tree/Tree_main.js"></script>
+</body>
+</html>

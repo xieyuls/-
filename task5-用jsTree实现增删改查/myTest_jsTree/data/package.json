@@ -1,0 +1,27 @@
+{
+   "id":"node0",
+   "text":"班级列表",
+   "data" : "A node",
+   "state" : "closed",
+   "children" : [{
+       "id":"node1",
+       "text":"01班",
+       "data" : "B node",
+       "state" : "closed",
+       "children":[{
+         "text":"张俊丰",
+         "data":[1,"计算机"],
+          "type":"text"
+       }]
+    } ,{
+       "id":"node2",
+       "text":"02班",
+       "data" : "C node",
+       "state" : "closed"
+   },{
+     "id":"node3",
+     "text":"03班",
+     "data" : "D node",
+     "state" : "closed"
+   }]
+}

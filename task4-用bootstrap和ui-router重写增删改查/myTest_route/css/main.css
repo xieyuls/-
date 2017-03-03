@@ -1,0 +1,67 @@
+/*全局调整*/
+body{
+    padding:30px;
+    margin:0;
+    font-family: 黑体;
+    background: linear-gradient(red, blue); /* 标准的语法 */
+}
+.content{
+    width:1200px;
+    height:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+/*标题以及搜索栏样式调整*/
+.top{
+    width:1200px;
+    height:35%;
+
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+.search{
+    width:80%;
+    height:30px;
+    border-radius: 10px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+/*侧边栏样式调整*/
+.select{
+    margin-top:20px;
+    margin-left:100px;
+    width: 18%;
+    padding:10px;
+    text-align: center;
+    font-size: 20px;
+}
+.select tr{
+}
+.info{
+    float: right;
+    width:80%;
+    height:600px;
+}
+
+/*内容样式调整*/
+.rightViewAll{
+    margin-left:120px;
+    width:740px;
+    height:auto;
+    /*border:1px solid green;*/
+}
+.infoTable{
+    width:100%;
+    height:100%;
+    /*border:1px solid green;*/
+}
+.infoTable tr th{
+    background: rgba(0,0,0,0);
+    color: #FFFFFF;
+}
+.infoTable tr td input{
+    background: rgba(0,0,0,0.1);
+    color: #FFFFFF;
+}

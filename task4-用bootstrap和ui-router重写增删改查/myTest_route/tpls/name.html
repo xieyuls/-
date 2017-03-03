@@ -1,0 +1,34 @@
+<div class="rightViewAll">
+    <table class="infoTable table-bordered">
+        <tr>
+            <th style="text-align: center;">姓名</th>
+            <th style="text-align: center;">学号</th>
+            <th style="text-align: center;">专业</th>
+            <th style="text-align: center;">操作</th>
+        </tr>
+        <tr ng-repeat="list in lists|filter:titleFilter" class="rep-tr">
+            <td style="text-align: center!important"><input
+                    type="text"
+                    ng-model="list.name"
+                    style="width:100%!important;text-align: center!important;font-size: 16px!important;"
+                    ng-disabled=!list.isChange>
+            </td>
+            <td style="text-align: center!important"><input
+                    type="text"
+                    ng-model="list.id"
+                    style="width:100%!important;text-align: center!important;font-size: 16px!important;"
+                    ng-disabled=!list.isChange>
+            </td>
+            <td style="text-align: center!important"><input
+                    type="text"
+                    ng-model="list.major"
+                    style="width:100%!important;text-align:center!important;font-size: 16px!important;"
+                    ng-disabled=!list.isChange>
+            </td>
+            <td ng-if=!list.isChange style="text-align: center!important"><a ui-sref="all" ng-click="edit($index)">修改</a>|<a ng-click="delete($index)" ui-sref="all">删除</a>
+            </td>
+            <td ng-if=list.isChange style="text-align: center!important"><a ui-sref="all" ng-click="change($index)">确定</a>
+            </td>
+        </tr>
+    </table>
+</div>

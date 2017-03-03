@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>注册</title>
+</head>
+<body>
+<form name="form" ng-controller="SignController">
+	<h1>Sign Up</h1>
+	<div>FirstName:<input type="text" ng-model="user.first" required></div>
+	<div>LastName:<input type="text" ng-model="user.last" required></div>
+	<div>email:<input type="email" ng-model="user.email" required></div>
+	<div>{{message}}</div>
+	<button ng-disabled="!form.$valid" ng-click="addUser()">submit</button>
+</form>
+
+<script type="text/javascript" src="angular.js"></script>
+<script type="text/javascript">
+	var myApp=angular.module("myApp",[])
+		.controller("SignController",function($scope){
+			$scope.message="";
+
+			$scope.addUser=function(){
+				$scope.message="Thanks!"+$scope.user.first+" "+$scope.user.last+",submit successed!"
+			}
+		});
+
+</script>
+</body>
+</html>

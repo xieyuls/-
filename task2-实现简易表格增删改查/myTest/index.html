@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>增删改查</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="jquery/jquery-3.1.1.min.js"></script>
+    <script src="angular/angular.js"></script>
+    <script src="angular/angular-ui-router.js"></script>
+    <script src="angular/angular-resource.js"></script>
+</head>
+<body>
+<div class="content"  ng-controller="listController">
+    <div class="topSelect">
+        搜索：<input type="text" class="select" placeholder="输入关键字" ng-model="titleFilter">
+    </div>
+    <div ui-view class="view"></div>
+</div>
+
+<script src="js/myApp.js"></script>
+</body>
+</html>
