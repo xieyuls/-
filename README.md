@@ -1,2 +1,2 @@
-# angular-
-对angular的练习
+# myTest
+对各种类库的简单应用，加深自己的使用心得
